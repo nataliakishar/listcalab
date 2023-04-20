@@ -1,0 +1,72 @@
+<ion-header transparent>
+  <ion-navbar color="primary">
+    <ion-title>{{titulo}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="conteudo">
+  <ion-grid class="grid-list">
+    <ion-row  align-itens-center justify-content-center>
+      <ion-col align-self-center col-12 col-lg-4  col-xl-4  >
+
+        <ion-list class="conteudo-input">
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.nome" [(ngModel)]="item.nome" placeholder="Nome Usuário:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.primeiro" [(ngModel)]="item.primeiro" placeholder="Sobrenome:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.titulo" [(ngModel)]="item.titulo" placeholder="Nome Título:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.genero" [(ngModel)]="item.genero" placeholder="Nome Gênero:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.pais" [(ngModel)]="item.pais" placeholder="País:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.cidade" [(ngModel)]="item.cidade" placeholder="Nome Cidade:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.estado" [(ngModel)]="item.estado" placeholder="Nome Estado:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.rua" [(ngModel)]="item.rua" placeholder="Rua:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.numero" [(ngModel)]="item.numero" placeholder="Número:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.codigopostal" [(ngModel)]="item.codigo" placeholder="CEP"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.lat" [(ngModel)]="item.lat" placeholder="Latitude:"></ion-input>
+          </ion-item>
+
+          <ion-item class="margem-input-top"> 
+            <ion-input type="item.lng" [(ngModel)]="item.lng" placeholder="Longitude:"></ion-input>
+          </ion-item>
+
+        </ion-list>
+  
+
+  
+    <button ion-button block (click)="salvar()" class="margem-btn-top" class="btn" >Salvar dados</button>
+    <button ion-button block color="red"  (click)="excluir()" class="margem-btn-top" class="btn" *ngIf="itemID !== undefined">Excluir</button>
+  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

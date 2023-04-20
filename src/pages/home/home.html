@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-title>
+      Lista Usuários
+    </ion-title>
+
+  </ion-navbar>
+
+  
+</ion-header>
+
+<ion-content class="conteudo">
+  <ion-grid class="grid-list">
+    <ion-row  align-itens-center justify-content-center>
+      <ion-col align-self-center col-12 col-lg-4  col-xl-4  >
+       
+  <ion-list class="conteudo-input">
+    <ion-item *ngFor="let item of usuarios" (click)="editItem(item)" class="margem-input-top" >
+      <h2>Nome:{{item.value.nome}}</h2>
+      <p>Título:{{item.value.titulo}} | Cidade:{{item.value.cidade}} | Gênero:{{item.value.genero}}</p>
+      <p>Estado:{{item.value.estado}} | Endereço:{{item.value.rua}} | Nº:{{item.value.numero}}</p>
+    </ion-item>
+  </ion-list>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab right edge>
+    <button ion-fab mini color="Aquamarine"><ion-icon name="md-arrow-dropdown"></ion-icon></button>
+    <ion-fab-list>
+   
+      <button ion-fab (click)="inserirUsuario()"><ion-icon name="md-person-add"></ion-icon></button>
+ 
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>
